@@ -23,14 +23,14 @@ const FeedbackForm = () => {
     // Validate rating and feedback
     if (rating === 0 || feedback.trim() === '') {
       setError('Please provide a rating and feedback before submitting.');
-      return; // Prevent form submission if rating or feedback is missing
+      return; 
     }
 
     // Set loading to true when submission starts
     setLoading(true);
 
     try {
-      const response = await fetch('http://localhost:5000/api/feedback/submit', { // Ensure the endpoint is correct
+      const response = await fetch('https://qualidash-backend.onrender.com/api/feedback/submit', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

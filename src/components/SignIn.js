@@ -22,7 +22,7 @@ function SignIn({ closeModal, handleLogin }) {
   const handleSignIn = async () => {
     if (username && password) {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/signin', {
+        const response = await fetch('https://qualidash-backend.onrender.com/api/auth/signin', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ function SignIn({ closeModal, handleLogin }) {
   const handleSignUp = async () => {
     if (email && password && role) {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/signup', {
+        const response = await fetch('https://qualidash-backend.onrender.com/api/auth/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

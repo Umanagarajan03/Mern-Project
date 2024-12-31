@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/Home";
@@ -27,7 +27,7 @@ function App() {
   const [userRole, setUserRole] = useState(localStorage.getItem("userRole") || "Production-Manager"); // Default role
   const [showCookieSettings, setShowCookieSettings] = useState(false);
   const location = useLocation();
-  const navigate = useNavigate();
+  
 
   const toggleCookieSettings = (show) => { setShowCookieSettings(show); };
   
