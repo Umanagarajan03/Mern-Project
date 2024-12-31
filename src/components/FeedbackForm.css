@@ -1,0 +1,95 @@
+/* Feedback Container Styles */
+.feedback-container {
+    background-color: #E5F3FC;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid #10182f;
+}
+
+.feedback-stars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.filledStar {
+    color: #ffd700;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.emptyStar {
+    color: #d3d3d3;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.feedback-textarea {
+    width: 70%;
+    height: 60px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.feedback-button {
+    background-color: #10182f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    /* Tablet Devices */
+    .feedback-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .feedback-textarea {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .feedback-button {
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile Devices */
+    .feedback-container {
+        width: 90%;
+        padding: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .feedback-stars {
+        flex-direction: row;
+        gap: 5px; /* Add space between stars */
+    }
+
+    .feedback-textarea {
+        width: 100%;
+        height: 50px;
+    }
+
+    .feedback-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+}

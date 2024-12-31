@@ -1,0 +1,97 @@
+
+  
+  .promise-container {
+    width: 60%; /* Make the container span the full width of the screen */
+    margin: 0 auto; /* Remove automatic centering */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #E5F3FC; /* Set background color to pure white */
+    box-sizing: border-box; /* Include padding in the width calculation */
+    border-radius: 10px;
+    border: 3px #10182f solid;
+    margin-top: 20px;
+    margin-bottom:20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(to right, #10182f, #1abc9c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .content {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .welcome-message {
+    margin-bottom: 15px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  
+  .belief {
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .quote-section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #f9f9ff;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+  }
+  
+  .quote-intro {
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .quote {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-style: italic;
+  }
+  
+  .quote p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  .additional-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .image-container {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .responsive-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .final-message {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #666;
+    text-align: left;
+  }

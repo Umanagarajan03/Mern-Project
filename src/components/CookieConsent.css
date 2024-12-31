@@ -1,0 +1,87 @@
+/* Dim overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 1000; /* Ensure it appears behind the popup */
+}
+
+.cookie-consent {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 650px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 1001; /* Ensure it appears above the overlay */
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Ensure content stays within the box */
+}
+
+.cookie-content {
+  position: relative; /* Required to position the image within this box */
+}
+
+.cookie-content img.cookie-image {
+  position: absolute;
+  top: 0; /* Fix to the top edge */
+  right: 0; /* Fix to the right edge */
+  width: 60px; /* Adjust the size of the image */
+  height: auto;
+  z-index: 1; /* Ensure the image is above the background but below the text */
+  border-radius: 10;
+  margin-top: -14px; /* Keep the original image shape */
+  border-radius: 5px;
+}
+
+#cp-h {
+  margin-top: 0px;
+  font-size: 1.5rem;
+  z-index: 2; /* Ensure text is above the image */
+  position: relative;
+  text-align: center;
+}
+
+#cp-p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0;
+  z-index: 2; /* Ensure text is above the image */
+  position: relative;
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  z-index: 2; /* Buttons stay above the image */
+  position: relative;
+}
+
+.cookie-buttons button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.cookie-buttons button:hover {
+  opacity: 0.9;
+  background-color: #10182f;
+  color: #fff;
+}
+
+.cookie-buttons .ok-button {
+  background-color: #1abc9c;
+  color: #fff;
+}

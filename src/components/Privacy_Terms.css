@@ -1,0 +1,102 @@
+/* Scoped CSS for Privacy and Terms of Use pages */
+.privacy-terms-container {
+  padding: 30px;
+  font-family: 'Poppins', Arial, sans-serif;
+  line-height: 1.6;
+  background-size: cover;
+  background-color: white; /* Change background to white */
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+body { 
+  background-color: white; /* Set the entire screen's background color to white */ 
+  margin: 0; 
+  padding: 0; 
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+.privacy-terms-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f0f8ff;
+  border-radius: 15px;
+  z-index: 1;
+  border: 3px solid #10182f;
+}
+
+.privacy-terms-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.privacy-terms-container h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #10182f;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+
+.privacy-terms-container .gradient-line {
+  height: 3px;
+  width: 35%;
+  background: linear-gradient(to right, #ff7e5f, #8a2be2, #adff2f, #ffa500, #10182f);
+  margin-bottom: 30px;
+  margin-top: -15px;
+}
+
+.terms-gradient-line {
+  height: 3px;
+  width: 60%;
+  background: linear-gradient(to right, #ff7e5f, #8a2be2, #adff2f, #ffa500, #10182f);
+  margin-bottom: 30px;
+  margin-top: -15px;
+}
+
+.privacy-terms-container h3 {
+  color: #1abc9c;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.privacy-terms-container ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.privacy-terms-container p,
+.privacy-terms-container ul {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.privacy-terms-container ul li {
+  margin-bottom: 10px;
+}
+
+.privacy-terms-container .no-underline {
+  text-decoration: none;
+}
+
+.privacy-terms-container .darkblue-link {
+  color: #3d63d5;
+}
+
+@media (max-width: 768px) {
+  .privacy-terms-container{
+     margin-left: 10px;
+      margin-right: 10px;
+  }
+}

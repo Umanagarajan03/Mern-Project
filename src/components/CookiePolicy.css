@@ -1,0 +1,140 @@
+.cookies-policy-page {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  margin-top:20px;
+  margin-bottom:20px;
+  border-radius:20px;
+  box-shadow: 0 0px 13px rgb(0,0,0,0.4);
+}
+
+.intro-section, .cookie-types, .control-cookies, 
+.third-party-cookies, .privacy-policy-link, .contact-info{
+margin-bottom: -30px;
+}
+
+.cookies-policy-page .cookie-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  animation: bounce 2s ease infinite;
+}
+
+.cookies-policy-page .cookie-image {
+  width: 200px;
+  animation: bounce 2s ease infinite;
+  border-radius: 40%;
+  object-fit: cover;
+}
+
+.contact-info{
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#cp-h1, 
+#cp-h2, 
+#cp-p {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0s;
+}
+
+#cp-h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+#cp-h2 {
+  font-size: 1.8em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #2980b9;
+}
+
+#cp-p {
+  font-size: 1.1em;
+  line-height: 1.3; /* Adjust line height for better readability */
+  margin-bottom: 10px; /* Reduced margin between paragraphs */
+}
+
+.cookies-policy-page ul {
+  margin-left: 20px;
+}
+
+.cookies-policy-page .cookies-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.cookies-policy-page .cookies-table th,
+.cookies-policy-page .cookies-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.cookies-policy-page .cookies-table th {
+  background-color: #f4f4f4;
+}
+
+.cookies-policy-page a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+.cookies-policy-page a:hover {
+  text-decoration: underline;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: #2980b9;
+}

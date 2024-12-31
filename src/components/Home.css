@@ -1,0 +1,775 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Swiper Video Slider Section */
+.header_wrapper {
+  position: relative;
+  width: 100%;
+  height: 900px;
+  margin-top: -80px;
+  
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+/* Swiper Navigation Arrows */
+.swiper-button-next, .swiper-button-prev {
+  color: rgb(248, 230, 230); /* Make arrows white */
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: black; /* Ensure the hover state is also white */
+}
+
+.slide-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.home2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#home2-p {
+  font-size: 1.2rem;
+}
+
+/* Section: What is AQC */
+#about-aqc {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+.about-aqc-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-aqc-content {
+  text-align: center;
+  color: #555;
+  font-size: 20px;
+}
+
+/* Key Benefits Section */
+.key-benefits {
+  padding: 20px;
+  margin-top: -10px;
+}
+
+
+.key-benefits-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+
+.benefits-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+
+.benefit-card {
+  position: relative;
+  width: 330px;
+  height: 370px;
+  overflow: hidden;
+  border: none; /* No initial border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease;
+}
+
+.benefit-card::before, 
+.benefit-card::after {
+  content: '';
+  position: absolute;
+  width: 0; /* Initial width */
+  height: 0; /* Initial height */
+  border: 2px solid black; /* The border style */
+  border-radius: 8px; /* Ensure rounded corners */
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.benefit-card::before {
+  top: 0;
+  left: 0;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+}
+
+.benefit-card::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.benefit-card:hover::before, 
+.benefit-card:hover::after {
+  width: 100%; /* Expand width on hover */
+  height: 100%; /* Expand height on hover */
+}
+
+.benefit-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance box-shadow on hover */
+}
+
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 2;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 21px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6); /* Set background color with opacity */
+  width: 330px;
+  margin-top: 20px;
+  margin-left: -9px;
+  text-align: center;
+}
+
+.card-description {
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100%); /* Start off-screen to the right */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center vertically */
+  text-align: left;
+  position: absolute; /* Position absolutely within the card */
+  top: 300%; /* Center vertically */
+  left: 4%; /* Align to the left edge of the card */
+  transform: translate(100%, -50%); /* Adjust position to off-screen and vertically centered */
+}
+
+.card-image img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Smooth fade-out effect */
+}
+
+.benefit-card:hover .card-description {
+  opacity: 1; /* Show description when hovered */
+  transform: translate(0, -50%); /* Slide in from the right */
+}
+
+.benefit-card .card-description {
+  transform: translate(-100%, -50%); /* Slide out to the left when not hovered */
+}
+
+
+.benefit-card:hover .card-image img {
+  opacity: 0.4; /* Fade out the image when hovered */
+}
+
+.benefit-card:hover .card-title {
+   background-color: transparent; /* Remove background color when hovered */ 
+  }
+
+/* Center the last two cards in the second row */ 
+.benefits-cards > .benefit-card:nth-child(4) {
+   grid-column: 1 / 3; /* Span across the first and second columns */ 
+   grid-row: 2; /* Place in the second row */ 
+   margin-top: 60px;
+  } 
+  
+  .benefits-cards > .benefit-card:nth-child(5) {
+     grid-column: 2 / 4; /* Span across the second and third columns */ 
+     grid-row: 2; /* Place in the second row */ 
+     margin-top: 60px;
+  }
+
+  @media (max-width:1024px){
+
+    .about-aqc{
+      margin-top: -20px;
+    }
+
+    .benefits-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-left:-10px;
+    margin-right: -10px;
+}
+.benefit-card {
+  position: relative;
+  width: 250px;
+  height: 370px;
+  overflow: hidden;
+  border: none; /* No initial border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+  transition: box-shadow 0.3s ease;
+}
+.card-title {
+  width: 250px;
+  font-size: 20px;
+}
+
+.slide-video{
+  margin: 0 0;
+}
+.overlay-message{
+  margin-top: -130px;
+}
+.home2{
+  font-size:20px;
+}
+#home2-p{
+  font-size: 17px;
+}
+.swiper-button-next, .swiper-button-prev {
+  font-size: 20px;
+  margin-top:-150px /* Adjust arrow size for smaller screens */
+}
+}
+
+  @media (max-width: 768px) {
+
+    .benefits-cards{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+  }
+  .benefit-card {
+    margin: 0 auto;
+  }
+
+  .benefits-cards > .benefit-card:nth-child(4) {
+    grid-column: 1 / 3; /* Span across the first and second columns */ 
+    grid-row: 2; /* Place in the second row */ 
+    margin-top: 10px;
+   } 
+   
+   .benefits-cards > .benefit-card:nth-child(5) {
+      grid-column: 2 / 4; /* Span across the second and third columns */ 
+      grid-row: 2; /* Place in the second row */ 
+      margin-top: 10px;
+   }
+  .card-title {
+    width: 250px;
+    font-size: 20px;
+  }
+  
+  .slide-video{
+    margin: 0 0;
+  }
+  .overlay-message{
+    margin-top: -130px;
+  }
+  .home2{
+    font-size:20px;
+  }
+  #home2-p{
+    font-size: 17px;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    font-size: 20px;
+    margin-top:-150px /* Adjust arrow size for smaller screens */
+  }
+
+    .swiper-button-next, .swiper-button-prev {
+      font-size: 24px; /* Adjust arrow size for smaller screens */
+    }
+  
+    .header_wrapper {
+      height: 500px; /* Adjust height for smaller screens */
+      margin-top: -40px;
+    }
+  
+    .benefits-cards {
+      grid-template-columns: 1fr 1fr; /* 2 cards per row on smaller screens */
+    }
+  
+    .case-studies-grid {
+      grid-template-columns: 1fr 1fr; /* Adjust grid for case studies */
+    }
+  
+    .trend-card {
+      width: 100%; /* Show only one trend card at a time on smaller screens */
+    }
+  
+    .future-trends-grid {
+      flex-direction: column; /* Stack trend cards vertically on smaller screens */
+    }
+
+    .future-trends{
+      /* margin-right:30px; */
+      padding-left:10px;
+    }
+  
+    .key-benefits-title, .case-studies-title, .challenges-title, #future-trends-title {
+      font-size: 1.5rem; /* Adjust title size */
+    }
+  
+    .card-title, .card-description, .challenge-title, .challenge-content {
+      font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    .overlay-message{
+      margin-top: 50px;
+    }
+
+    .home2{
+      font-size: 20px;;
+    }
+    
+  }
+  
+/* Section: Case Studies */
+.case-studies {
+  padding: 50px 20px;
+  background: #ffffff;
+  margin-top: -10px;
+}
+
+.case-studies-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+    margin-bottom: 40px;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 40px;
+}
+
+.case-study-card {
+  background: #f8f9fa;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.8);
+}
+
+.case-study-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #ddd;
+}
+
+.case-study-title {
+  font-size: 1.5rem;
+  padding: 20px 0;
+  text-align: center;
+  color: black;
+}
+
+.case-study-description {
+  font-size: 1rem;
+  margin-top: -50px;
+  color: #555;
+  text-align: center;
+  padding: 30px;
+}
+
+
+/* Section: Challenges */
+.challenges {
+  padding: 50px 30px;
+  text-align: center;
+  margin-top: -30px;
+}
+
+.challenges-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Challenges container */
+.challenges-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Increase the gap between items */
+  padding: 20px;
+}
+
+/* Individual challenge item */
+.challenge-item {
+  position: relative;
+  background: rgb(231, 228, 228);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Background image for challenge item */
+.challenge-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0; /* Invisible initially */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1; /* Below the content */
+}
+
+/* Assign specific images to each challenge item */
+.challenge-item:nth-child(1)::before {
+  background-image: url("../assets/challenge1.jpg");
+}
+
+.challenge-item:nth-child(2)::before {
+  background-image: url("../assets/challenge2.png");
+}
+
+.challenge-item:nth-child(3)::before {
+  background-image: url("../assets/challenge3.jpg");
+}
+
+.challenge-item:nth-child(4)::before {
+  background-image: url("../assets/challenge5.png");
+}
+
+/* Content visibility */
+.challenge-title {
+  position: relative;
+  z-index: 2; /* Above the background */
+  color: black;
+  font-size: 1.5rem;
+}
+
+.challenge-content {
+  position: relative;
+  z-index: 2;
+  display: none; /* Hidden by default */
+  font-size: 0.9rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Hover effect for the active challenge item */
+.challenge-item.hovered {
+  transform: scaleY(1.35); /* Scale all items to the same size */
+  z-index: 2; /* Bring to front */
+}
+
+.challenge-item.hovered .challenge-content {
+  display: block; /* Show content on hover */
+}
+
+.challenge-item.hovered::before {
+  opacity: 0.6; /* Slightly more visible */
+  transform: scaleY(1); /* Slightly larger image for better visibility */
+}
+
+/* Blur other items */
+.challenge-item:not(.hovered) {
+  transform: scale(1); /* Keep other items at the default size */
+}
+
+/* Show the challenge content only when hovered */
+.challenge-item:hover .challenge-content {
+  display: block; /* Display content when hovered */
+}
+
+.challenge-item:not(:hover) .challenge-content {
+  display: none; /* Hide content when not hovered */
+}
+
+
+
+/* Section: Future Trends */
+#future-trends-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.future-trends-swiper {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  align-items: center;
+  position: relative; /* Ensure the swiper container is positioned relative */
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 20px; /* Adjust this value to move the pagination icons down */
+  left: 50%;
+  z-index: 10; /* Ensure the pagination icons are above other elements */
+}
+
+
+.trend-card {
+  position: relative;
+  width: 100%; /* Ensure each trend card takes full width of its container */
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Ensure border-radius is applied */
+  border-radius: 20px; /* Ensure the border radius remains curved */
+}
+
+.trend-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover; /* Ensure the image covers the entire area */
+  border-radius: 20px; /* Ensure the border radius remains curved */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trend-text {
+  padding: 20px;
+  text-align: center;
+  color: #555;
+}
+
+.trend-content {
+  position: absolute;
+  bottom: -100%; /* Start off-screen at the bottom */
+  left: 0;
+  width: 100%;
+  height: 330px;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  transition: bottom 2s ease; /* Smooth slide-in effect */
+}
+
+.trend-card.middle .trend-content {
+  bottom: 0; /* Slide in to the bottom of the card */
+  height:auto;
+}
+
+.trend-card.middle .trend-image {
+  transform: scale(1.2); /* Enlarge the middle image */
+  z-index: 1; /* Bring the enlarged image to the front */
+  border-radius: 20px; /* Ensure the border radius remains curved */
+}
+
+
+@media (max-width: 768px) {
+  .trend-card {
+    width: 100%; /* Ensure each trend card takes full width on smaller screens */
+  }
+  .trend-image {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+
+  .trend-card.middle .trend-content{
+    height: 330px;
+  }
+}
+
+/* Sponsors Section */
+
+#sponsers{
+  
+  background: #d8ddee;
+  padding: 2px 20px;
+  border-radius: 20px;
+}
+
+.h2 {
+  margin-bottom: 30px;
+  background: linear-gradient(to right, #10182f, #1abc9c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.home1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-slider {
+  overflow: hidden;
+}
+
+.image-slider-track {
+  display: flex;
+  animation: slider 30s infinite linear;
+}
+
+.image-slider-track .slide {
+  flex: 0 0 auto;
+  width: 120px;
+  margin: 0 15px;
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+#home-img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .overlay-message {
+    position: absolute;
+    top: 22%;
+    padding: 20px;
+  }
+  /* Swiper Navigation Arrows */
+.swiper-button-next, .swiper-button-prev {
+  color: white;
+  margin-top: -300px; /* Make arrows white */
+}
+.benefits-cards {
+  grid-template-columns: 1fr 1fr; /* 2 cards per row on smaller screens */
+  margin-left: 15px;
+  margin-right: 15px;
+}
+ 
+}
+
+/* For screens larger than 1240px */
+@media screen and (min-width: 1240px) {
+  .container {
+    display: flex;
+  }
+  .sidebar {
+    width: 300px;
+  }
+}
+
+/* For screens between 768px and 1240px */
+@media screen and (max-width: 1240px) and (min-width: 768px) {
+  .container {
+    display: block;
+  }
+  .sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .container {
+    display: block;
+  }
+  .sidebar {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .header, .footer {
+    padding: 15px;
+  }
+  .content {
+    padding: 10px;
+  }
+}
+
+/* For screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  .sidebar {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .header, .footer {
+    font-size: 14px;
+  }
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: #1abc9c;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  font-size: 1.0rem;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  
+} 
+
+.scroll-to-top:hover {
+  background-color: red;
+}

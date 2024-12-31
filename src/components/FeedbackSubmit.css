@@ -1,0 +1,98 @@
+/* Feedback Submission Container Styles */
+.feedsub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: #E5F3FC;
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center; /* Center the text */
+  }
+  
+  /* Checkmark styling */
+  .checkmark {
+    font-size: 24px;
+    color: #00796b;
+    margin-bottom: 10px;
+  }
+  
+  /* Thank you text styling */
+  .feedsub-thank-you {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Footer text styling */
+  .feedsub-footer {
+    height: 85px;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #10182f;
+    color: white;
+    text-align: center;
+  }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .feedsub-container {
+        width: 60%;
+        padding: 15px;
+    }
+
+    .checkmark {
+        font-size: 24px;
+    }
+
+    .feedsub-thank-you {
+        font-size: 18px;
+    }
+
+    .feedsub-footer{
+        height: 155px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedsub-container {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .checkmark {
+        font-size: 20px;
+    }
+
+    .feedsub-thank-you {
+        font-size: 16px;
+    }
+
+    .feedsub-footer {
+        font-size: 10px;
+        height: 155px;
+    }
+}
+
+@media (max-width: 480px) {
+    .feedsub-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .checkmark {
+        font-size: 18px;
+    }
+
+    .feedsub-thank-you {
+        font-size: 14px;
+    }
+
+    .feedsub-footer {
+        font-size: 8px;
+        height: 85px;
+    }
+}
