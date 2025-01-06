@@ -1,11 +1,26 @@
 #Home page
+
+
 ![image](https://github.com/user-attachments/assets/329cf863-78d0-4ddb-98ef-951a1bd7743b)
 #Dashbord page
+
+
+
 ![image](https://github.com/user-attachments/assets/884a80ca-bbbc-4549-89db-50f49c0b6a86)
+
+
 #About us
+
+
 ![image](https://github.com/user-attachments/assets/d440a74a-2bc4-4ef0-8a36-5bb7e4ed4c4c)
+
+
 #signin and Singup
+
+
 ![image](https://github.com/user-attachments/assets/7b10c7c8-cc35-4e0e-9dce-a009ea7fb935)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
